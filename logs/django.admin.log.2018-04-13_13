@@ -1,0 +1,16 @@
+[INFO][2018-04-13 13:18:10,520][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-13 13:18:10,560][basehttp.py][log_message][124]> "GET /art/index_handler/ HTTP/1.1" 200 10952
+[INFO][2018-04-13 13:18:10,600][basehttp.py][log_message][124]> "GET /static/base/css/animate.css HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,603][basehttp.py][log_message][124]> "GET /static/base/css/bootstrap.min.css HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,605][basehttp.py][log_message][124]> "GET /static/base/js/jquery.min.js HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,606][basehttp.py][log_message][124]> "GET /static/base/css/bootstrap-art.css HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,625][basehttp.py][log_message][124]> "GET /static/base/js/bootstrap.min.js HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,625][basehttp.py][log_message][124]> "GET /static/lazyload/jquery.lazyload.min.js HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,626][basehttp.py][log_message][124]> "GET /static/base/js/jquery.singlePageNav.min.js HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,628][basehttp.py][log_message][124]> "GET /static/base/js/wow.min.js HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,629][basehttp.py][log_message][124]> "GET /static/base/images/logo.png HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,660][basehttp.py][log_message][124]> "GET /static/base/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,766][basehttp.py][log_message][124]> "GET /static/uploads/23.jpg HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,772][basehttp.py][log_message][124]> "GET /static/uploads/15.jpg HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,773][basehttp.py][log_message][124]> "GET /static/uploads/timg.jpeg HTTP/1.1" 304 0
+[INFO][2018-04-13 13:18:10,775][basehttp.py][log_message][124]> "GET /static/uploads/timg_cudG93L.jpeg HTTP/1.1" 304 0

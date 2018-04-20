@@ -1,0 +1,16 @@
+[WARNING][2018-04-12 20:42:18,006][csrf.py][_reject][160]> Forbidden (CSRF cookie not set.): /art/art_post/
+[WARNING][2018-04-12 20:42:18,011][basehttp.py][log_message][124]> "POST /art/art_post/ HTTP/1.1" 403 2829
+[WARNING][2018-04-12 20:43:42,463][csrf.py][_reject][160]> Forbidden (CSRF cookie not set.): /art/art_post/
+[WARNING][2018-04-12 20:43:42,467][basehttp.py][log_message][124]> "POST /art/art_post/ HTTP/1.1" 403 2829
+[WARNING][2018-04-12 20:44:22,769][csrf.py][_reject][160]> Forbidden (CSRF cookie not set.): /art/art_post/
+[WARNING][2018-04-12 20:44:22,774][basehttp.py][log_message][124]> "POST /art/art_post/ HTTP/1.1" 403 2829
+[INFO][2018-04-12 20:47:53,585][basehttp.py][log_message][124]> "GET /art/art_post/ HTTP/1.1" 200 6
+[WARNING][2018-04-12 20:47:53,683][basehttp.py][log_message][124]> "GET /favicon.ico HTTP/1.1" 404 2071
+[WARNING][2018-04-12 20:48:19,622][csrf.py][_reject][160]> Forbidden (CSRF cookie not set.): /art/art_post/
+[WARNING][2018-04-12 20:48:19,625][basehttp.py][log_message][124]> "POST /art/art_post/ HTTP/1.1" 403 2829
+[WARNING][2018-04-12 20:50:21,535][csrf.py][_reject][160]> Forbidden (CSRF cookie not set.): /art/art_post/
+[WARNING][2018-04-12 20:50:21,539][basehttp.py][log_message][124]> "POST /art/art_post/ HTTP/1.1" 403 2829
+[INFO][2018-04-12 20:55:34,421][basehttp.py][log_message][124]> "POST /art/art_post/ HTTP/1.1" 200 51
+[INFO][2018-04-12 21:00:13,722][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-12 21:00:13,746][basehttp.py][log_message][124]> "GET /art/index_handler/ HTTP/1.1" 200 10952
+[INFO][2018-04-12 21:00:15,708][basehttp.py][log_message][124]> "GET /art/detail/?id=5 HTTP/1.1" 200 5078

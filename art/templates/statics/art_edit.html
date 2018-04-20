@@ -1,0 +1,215 @@
+{% extends "statics/base.html" %}
+
+{% block content %}
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">文章管理/编辑文章</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        编辑文章
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            {% if id != None %}
+                            <tr>
+                                <td style="width:10%">标题</td>
+                                <td>
+                                    <input type="text" class="form-control" id="input_title" value="{{ art.a_title }}">
+                                </td>
+                                <td id="error_title" style="width:30%"></td>
+                            </tr>
+                            <tr>
+                                <td>简介</td>
+                                <td>
+                                    <textarea id="input_info" rows=10 class="form-control">{{ art.a_info }}</textarea>
+                                </td>
+                                <td id="error_info"></td>
+                            </tr>
+                            <tr>
+                                <td>封面</td>
+                                <td>
+                                    <input type="file" id="upload_img">
+                                    <img src="/static/{{ art.a_img }}" style="height:166px;" class="pull-left" id="show_img">
+                                    <input type="hidden" id="input_img" value="{{ art.a_img }}">
+                                    <a class="btn btn-primary" id="btn-upload">上传图片</a>
+                                </td>
+                                <td id="error_img"></td>
+                            </tr>
+                            <tr>
+                                <td>标签</td>
+                                <td>
+                                    <select class="form-control" id="input_tag">
+                                        <option value="0">--请选择标签--</option>
+                                        {% for v in tags %}
+                                            {% if v.id == art.a_tag_id %}
+                                                <option value="{{ v.id }}" selected>{{ v.t_name }}</option>
+                                            {% else %}
+                                                <option value="{{ v.id }}">{{ v.t_name }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </td>
+                                <td id="error_tag"></td>
+                            </tr>
+                            <tr>
+                                <td>内容</td>
+                                <td>
+                                    <textarea id="input_content">{{ art.a_content }}</textarea>
+                                </td>
+                                <td id="error_content"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="hidden" id="input_id" value="{{ art.id }}">
+                                    <a class="btn btn-success pull-left" id="btn-sub">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                        修改
+                                    </a>
+                                </td>
+                            </tr>
+                            {% else %}
+                                <tr>
+                                    <td style="width:10%">标题</td>
+                                    <td>
+                                        <input type="text" class="form-control" id="input_title">
+                                    </td>
+                                    <td id="error_title" style="width:30%"></td>
+                                </tr>
+                                <tr>
+                                    <td>简介</td>
+                                    <td>
+                                        <textarea id="input_info" rows=10 class="form-control"></textarea>
+                                    </td>
+                                    <td id="error_info"></td>
+                                </tr>
+                                <tr>
+                                    <td>封面</td>
+                                    <td>
+                                        <input type="file" id="upload_img">
+                                        <img src="holder.js/262x166" style="height:166px;" class="pull-left" id="show_img">
+                                        <input type="hidden" id="input_img">
+                                        <a class="btn btn-primary" id="btn-upload">上传图片</a>
+                                    </td>
+                                    <td id="error_img"></td>
+                                </tr>
+                                <tr>
+                                    <td>标签</td>
+                                    <td>
+                                        <select class="form-control" id="input_tag">
+                                            <option value="0">--请选择标签--</option>
+                                            {% for v in tags %}
+                                                <option value="{{ v.id }}">{{ v.t_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                    <td id="error_tag"></td>
+                                </tr>
+                                <tr>
+                                    <td>内容</td>
+                                    <td>
+                                        <textarea id="input_content"></textarea>
+                                    </td>
+                                    <td id="error_content"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <input type="hidden" id="input_id" value="0">
+                                        <a class="btn btn-success pull-left" id="btn-sub">
+                                            <span class="glyphicon glyphicon-edit"></span>
+                                            编辑
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+<script src="//cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+
+
+    <script>
+        var ue = UE.getEditor('input_content', {
+            initialFrameWidth: "100%",
+            initialFrameHeight: "300",
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var img;
+
+            function getCookie(name) {
+                var r = document.cookie.match("\\b" + name + "=([^;]*)\\b");
+                return r ? r[1] : undefined;
+            }
+
+            $("#btn-upload").click(function () {
+                var img = $("#upload_img")[0].files[0];
+                var formData = new FormData();
+                formData.append("img", img);
+                $.ajax({
+                    url: "/upload",
+                    type: "POST",
+                    dataType: "json",
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    success: function (re) {
+                        if (re.ok == 1) {
+                            $("#show_img").attr("src", "/static/" + re.img);
+                            img = re.img;
+                            $("#input_img").attr("value", img);
+                        }
+                    }
+                });
+            });
+            $("#btn-sub").click(function () {
+                var title = $("#input_title").val();
+                var info = $("#input_info").val();
+                var _xsrf = getCookie("_xsrf");
+                var content = UE.getEditor('input_content').getContent();
+                var tag = $("#input_tag").val();
+                var id = $("#input_id").val();
+                var img = $("#input_img").val();
+                var data = {
+                    "title": title, "info": info,
+                    "content": content, "tag": tag,
+                    "img": img, "id": id,
+                    "_xsrf": _xsrf
+                };
+                $.ajax({
+                    url: "/art/art_ed_post",
+                    type: "POST",
+                    data: data,
+                    dataType: "json",
+                    success: function (re) {
+                        if (re.ok == 1) {
+                            location.href = "/art/art_list";
+                        } else {
+                            var fields = ["title", "info", "content", "tag", "img"];
+                            for (v in fields) {
+                                if (typeof re[fields[v]] == "undefined") {
+                                    $("#error_" + fields[v]).empty();
+                                } else {
+                                    $("#error_" + fields[v]).empty();
+                                    $("#error_" + fields[v]).append("<font style='color:red'>" + re[fields[v]] + "</font>");
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

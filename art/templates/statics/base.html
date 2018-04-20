@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>精选美文统计</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'ui/themes/default/easyui.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ui/themes/icon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ui/demo/demo.css' %}">
+    <script type="text/javascript" src="{% static 'ui/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ui/jquery.easyui.min.js' %}"></script>
+    <link rel="shortcut icon" href="{% static 'base/images/logo.png' %}">
+    <link href="{% static 'admin/bower_components/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/bower_components/metisMenu/dist/metisMenu.min.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/dist/css/sb-admin-2.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/bower_components/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"
+          type="text/css">
+    <link href="{% static 'admin/css/common.css' %}" type="text/css" rel="stylesheet">
+    <style>
+        .page-header {
+            margin: 12px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">下拉菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/art/art_statics"><img src="{% static 'base/images/logo.png' %}"
+                                                             style="width:18px;height:18px;display:inline-block;">&nbsp;美文统计平台</a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="/admin"><i class="fa fa-user fa-fw"></i> 管理员</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="/admin/logout/"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="#"><i class="fa fa-tag" aria-hidden="true"></i> 模型管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/art/index_handler/"><i class="fa fa-list" aria-hidden="true"></i> 精选美文</a>
+                            </li>
+                            <li>
+                                <a href="/admin/"><i class="fa fa-bolt" aria-hidden="true"></i> 数据管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/art/statics"><i class="fa fa-file-text" aria-hidden="true"></i> 数据统计<span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/art/art_list"><i class="fa fa-filter" aria-hidden="true"></i>文章数据列表</a>
+                            </li>
+                            <li>
+                                <a href="/art/art_statics"><i class="fa fa-filter" aria-hidden="true"></i> 柱状数据统计</a>
+                            </li>
+                            <li>
+                                <a href="/art/art_lines"><i class="fa fa-vimeo-square" aria-hidden="true"></i> 线状数据统计 </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+</div>
+
+<script src="{% static 'admin/bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'admin/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'admin/bower_components/metisMenu/dist/metisMenu.min.js' %}"></script>
+<script src="{% static 'admin/dist/js/sb-admin-2.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'admin/ueditor/ueditor.config.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/ueditor/ueditor.all.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/ueditor/lang/zh-cn/zh-cn.js' %}"></script>
+
+
+{% block js %}{% endblock %}
+</body>
+
+</html>

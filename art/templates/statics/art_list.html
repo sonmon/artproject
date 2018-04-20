@@ -1,0 +1,98 @@
+{% extends "statics/base.html" %}
+
+{% block content %}
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">文章管理/文章列表</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        文章列表
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-12" id="key_search">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="key" placeholder="请输入关键字" {% if key != "" %} value="{{ key }}"{% endif %}>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-default" type="button" id="btn-search">
+                                            <span class="glyphicon glyphicon-search"></span>&nbsp;
+                                            搜索
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-bordered">
+                            <tr class="text-primary" style="font-weight:bold;">
+                                <td style="width:10%">编号</td>
+                                <td style="width:18%">标题</td>
+                                <td style="width:18%">封面</td>
+                                <td style="width:18%">标签</td>
+                                <td style="width:18%">添加时间</td>
+                                <td style="width:18%">操作</td>
+                            </tr>
+                            {% for v in data %}
+                            <tr>
+                                <td>{{ v.id }}</td>
+                                <td>{{ v.a_title }}</td>
+                                <td>
+                                    <img src="/static/{{ v.a_img }}" style="width:131px;height:83px;">
+                                </td>
+                                <td>{{ v.a_info }}</td>
+                                <td>{{ v.a_addtime }}</td>
+                                <td>
+                                    <a class="label label-warning" href="/art/art_edit?id={{ v.id }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 编辑</a>
+                                    &nbsp;
+                                    <a class="label label-danger" href="#" data-toggle="modal" data-target="#myModal{{ v.id }}"><i class="fa fa-times" aria-hidden="true"></i> 删除</a>
+                                    <div class="modal fade" id="myModal{{ v.id }}" tabindex="-1" role="dialog"
+                                     aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">删除操作</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    是否删除{{ v.id }}.{{ v.a_title }}这条记录？
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">撤销
+                                                    </button>
+                                                    <a class="btn btn-danger" href="art/art_del?id={{ v.id }}">确认</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+
+<script>
+    $(document).ready(function(){
+        $("#btn-search").click(function(){
+            var key = $("#key").val();
+            location.href = "{{ url }}?page=1&key="+key;
+        });
+    });
+
+</script>
+
+{% endblock %}

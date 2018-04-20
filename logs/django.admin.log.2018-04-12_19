@@ -1,0 +1,20 @@
+[INFO][2018-04-12 19:25:29,554][index_handler.py][IndexHandler][29]> IndexHandler request Handler begin
+[INFO][2018-04-12 19:25:29,592][basehttp.py][log_message][124]> "GET /art/index_handler/ HTTP/1.1" 200 10952
+[INFO][2018-04-12 19:25:29,640][basehttp.py][log_message][124]> "GET /static/base/css/bootstrap.min.css HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,643][basehttp.py][log_message][124]> "GET /static/base/css/animate.css HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,646][basehttp.py][log_message][124]> "GET /static/base/css/bootstrap-art.css HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,650][basehttp.py][log_message][124]> "GET /static/base/js/jquery.min.js HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,662][basehttp.py][log_message][124]> "GET /static/base/js/jquery.singlePageNav.min.js HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,662][basehttp.py][log_message][124]> "GET /static/base/js/bootstrap.min.js HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,662][basehttp.py][log_message][124]> "GET /static/base/js/wow.min.js HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,667][basehttp.py][log_message][124]> "GET /static/lazyload/jquery.lazyload.min.js HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,669][basehttp.py][log_message][124]> "GET /static/base/images/logo.png HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,759][basehttp.py][log_message][124]> "GET /static/base/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,875][basehttp.py][log_message][124]> "GET /static/uploads/23.jpg HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,877][basehttp.py][log_message][124]> "GET /static/uploads/timg.jpeg HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,878][basehttp.py][log_message][124]> "GET /static/uploads/timg_cudG93L.jpeg HTTP/1.1" 304 0
+[INFO][2018-04-12 19:25:29,883][basehttp.py][log_message][124]> "GET /static/uploads/15.jpg HTTP/1.1" 304 0
+[INFO][2018-04-12 19:26:07,338][basehttp.py][log_message][124]> "GET /art/detail/?id=5 HTTP/1.1" 200 5078
+[INFO][2018-04-12 19:26:12,248][basehttp.py][log_message][124]> "GET /art/detail/?id=4 HTTP/1.1" 200 5090
+[INFO][2018-04-12 19:26:14,384][basehttp.py][log_message][124]> "GET /art/detail/?id=4 HTTP/1.1" 200 5090
+[INFO][2018-04-12 19:26:14,501][basehttp.py][log_message][124]> "GET /static/base/images/logo.png HTTP/1.1" 200 3000

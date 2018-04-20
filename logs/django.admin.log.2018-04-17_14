@@ -1,0 +1,46 @@
+[INFO][2018-04-17 13:07:20,968][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:08:07,686][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:08:09,746][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:08:20,766][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:08:22,396][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:08:38,962][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:11:44,430][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:13:59,551][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:15:55,489][basehttp.py][log_message][124]> "GET /art/index/ HTTP/1.1" 200 91
+[WARNING][2018-04-17 13:15:55,563][basehttp.py][log_message][124]> "GET /favicon.ico HTTP/1.1" 404 2071
+[INFO][2018-04-17 13:15:59,534][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:15:59,554][basehttp.py][log_message][124]> "GET /art/index_handler/ HTTP/1.1" 200 10952
+[INFO][2018-04-17 13:15:59,619][basehttp.py][log_message][124]> "GET /static/base/images/logo.png HTTP/1.1" 200 3000
+[INFO][2018-04-17 13:15:59,759][basehttp.py][log_message][124]> "GET /static/uploads/15.jpg HTTP/1.1" 200 120810
+[INFO][2018-04-17 13:15:59,760][basehttp.py][log_message][124]> "GET /static/uploads/timg.jpeg HTTP/1.1" 200 111464
+[INFO][2018-04-17 13:15:59,761][basehttp.py][log_message][124]> "GET /static/uploads/timg_cudG93L.jpeg HTTP/1.1" 200 111464
+[INFO][2018-04-17 13:15:59,762][basehttp.py][log_message][124]> "GET /static/uploads/23.jpg HTTP/1.1" 200 88513
+[INFO][2018-04-17 13:16:02,935][basehttp.py][log_message][124]> "GET /art/detail/?id=5 HTTP/1.1" 200 5078
+[INFO][2018-04-17 13:16:10,359][basehttp.py][log_message][124]> "GET /art/art_list/ HTTP/1.1" 200 17811
+[INFO][2018-04-17 13:16:10,397][basehttp.py][log_message][124]> "GET /static/ui/demo/demo.css HTTP/1.1" 200 388
+[INFO][2018-04-17 13:16:10,400][basehttp.py][log_message][124]> "GET /static/ui/jquery.easyui.min.js HTTP/1.1" 200 424333
+[INFO][2018-04-17 13:16:10,403][basehttp.py][log_message][124]> "GET /static/admin/bower_components/metisMenu/dist/metisMenu.min.css HTTP/1.1" 200 781
+[INFO][2018-04-17 13:16:10,404][basehttp.py][log_message][124]> "GET /static/ui/themes/default/easyui.css HTTP/1.1" 200 66948
+[INFO][2018-04-17 13:16:10,406][basehttp.py][log_message][124]> "GET /static/ui/themes/icon.css HTTP/1.1" 200 2506
+[INFO][2018-04-17 13:16:10,408][basehttp.py][log_message][124]> "GET /static/admin/bower_components/bootstrap/dist/css/bootstrap.min.css HTTP/1.1" 200 121260
+[INFO][2018-04-17 13:16:10,411][basehttp.py][log_message][124]> "GET /static/ui/jquery.min.js HTTP/1.1" 200 95957
+[INFO][2018-04-17 13:16:10,414][basehttp.py][log_message][124]> "GET /static/admin/dist/css/sb-admin-2.css HTTP/1.1" 200 5842
+[INFO][2018-04-17 13:16:10,417][basehttp.py][log_message][124]> "GET /static/admin/bower_components/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 21984
+[INFO][2018-04-17 13:16:10,422][basehttp.py][log_message][124]> "GET /static/admin/css/common.css HTTP/1.1" 200 634
+[INFO][2018-04-17 13:16:10,430][basehttp.py][log_message][124]> "GET /static/admin/bower_components/jquery/dist/jquery.min.js HTTP/1.1" 200 84380
+[INFO][2018-04-17 13:16:10,440][basehttp.py][log_message][124]> "GET /static/admin/bower_components/bootstrap/dist/js/bootstrap.min.js HTTP/1.1" 200 36868
+[INFO][2018-04-17 13:16:10,444][basehttp.py][log_message][124]> "GET /static/admin/bower_components/metisMenu/dist/metisMenu.min.js HTTP/1.1" 200 1879
+[INFO][2018-04-17 13:16:10,448][basehttp.py][log_message][124]> "GET /static/admin/dist/js/sb-admin-2.js HTTP/1.1" 200 1181
+[INFO][2018-04-17 13:16:10,459][basehttp.py][log_message][124]> "GET /static/admin/ueditor/ueditor.config.js HTTP/1.1" 200 19775
+[INFO][2018-04-17 13:16:10,470][basehttp.py][log_message][124]> "GET /static/admin/ueditor/ueditor.all.js HTTP/1.1" 200 1111191
+[INFO][2018-04-17 13:16:10,484][basehttp.py][log_message][124]> "GET /static/admin/ueditor/lang/zh-cn/zh-cn.js HTTP/1.1" 200 29351
+[INFO][2018-04-17 13:16:10,553][basehttp.py][log_message][124]> "GET /static/admin/bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0 HTTP/1.1" 200 65452
+[INFO][2018-04-17 13:16:10,557][basehttp.py][log_message][124]> "GET /static/admin/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[INFO][2018-04-17 13:16:12,901][basehttp.py][log_message][124]> "GET /art/art_statics/ HTTP/1.1" 200 6235
+[INFO][2018-04-17 13:16:12,928][basehttp.py][log_message][124]> "GET /static/hchart/highcharts.js HTTP/1.1" 200 198876
+[INFO][2018-04-17 13:16:12,942][basehttp.py][log_message][124]> "GET /static/hchart/modules/exporting.js HTTP/1.1" 200 9524
+[INFO][2018-04-17 13:16:14,614][basehttp.py][log_message][124]> "GET /art/art_lines/ HTTP/1.1" 200 6784
+[INFO][2018-04-17 13:16:18,076][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 13:16:18,092][basehttp.py][log_message][124]> "GET /art/index_handler/ HTTP/1.1" 200 10952
+[INFO][2018-04-17 14:14:06,411][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-17 14:14:55,642][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin

@@ -1,0 +1,4 @@
+[INFO][2018-04-20 11:47:19,712][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 11:47:19,725][basehttp.py][log_message][124]> "GET /art/index_handler/?page=2&t=0 HTTP/1.1" 200 6515
+[INFO][2018-04-20 11:47:22,889][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 11:47:22,901][basehttp.py][log_message][124]> "GET /art/index_handler/?page=1&t=0 HTTP/1.1" 200 6530

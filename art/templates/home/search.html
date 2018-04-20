@@ -1,0 +1,72 @@
+{% extends "home/base.html" %}
+{% block content %}
+    <div class="container" style="margin-top:76px">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb" style="margin-top:6px;">
+                    <li>与"{{ key }}"有关的文章，共{{ total }}篇</li>
+                </ol>
+            </div>
+            {% for v in  data %}
+                <div class="col-md-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="/art/detail?id={{ v.id }}">
+                                <img class="media-object" src="/static/{{ v.a_img }}" style="width:131px;height:83px;"
+                                     alt="{{ v.a_title }}">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ v.a_title }}<a href="/art/detail?id={{ v.id }}"
+                                                                        class="label label-primary pull-right"><span
+                                    class="glyphicon glyphicon-eye-open"></span>阅读文章</a></h4>
+                            {{ v.a_info }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="col-md-12 text-center" style="margin-top:12px;">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="{{ url }}?page=1&key={{ key }}" aria-label="First">
+                                <span aria-hidden="true">首页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url }}?page={{ prev }}&key={{ key }}"
+                               aria-label="Previous">
+                                <span aria-hidden="true">上一页</span>
+                            </a>
+                        </li>
+                        {% for v in pagerange %}
+                            {% if v == page %}
+                                <li class="active"><a href="{{ url }}?page={{ v }}&key={{ key }}">{{ v }}</a></li>
+                            {% else %}
+                                <li><a href="{{ url }}?page={{ v }}&key={{ key }}">{{ v }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        <li>
+                            <a href="{{ url }}?page={{ next }}&key={{ key }}"
+                               aria-label="Next">
+                                <span aria-hidden="true">下一页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url }}?page={{ pagenum }}&key={{ key }}"
+                               aria-label="Last">
+                                <span aria-hidden="true">尾页</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="label label-success" style="display:inline-block;width:150px;">共{{ pagenum }}页</a>
+                &nbsp;
+                <a class="label label-info" style="display:inline-block;width:150px;">共{{ total }}条记录</a>
+            </div>
+
+
+        </div>
+
+    </div>
+{% endblock %}

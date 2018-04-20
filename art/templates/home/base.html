@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>精选美文</title>
+
+    <link rel="shortcut icon" href="{% static 'base/images/logo.png' %} ">
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap-art.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/animate.css' %}">
+    <style>
+        .navbar-brand>img {
+            display: inline;
+        }
+        .media{
+            padding:3px;
+            border:1px solid #ccc
+        }
+    </style>
+    {% block css %}{% endblock %}
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!--小屏幕，导航按钮和logo-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/art/index_handler" class="navbar-brand" style="width:250px;">
+                <img src="{% static 'base/images/logo.png' %}" style="height:30px;">&nbsp;精选美文
+            </a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+        <!--导航-->
+        <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-left" role="search" action="/art/search" method="get" style="margin-top:18px;">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="请输入文章信息！" id="key" name="key">
+                    <span class="input-group-btn">
+                        <a id="btn-search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>&nbsp;搜索</a>
+                    </span>
+                </div>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="curlink" href="/art/art_list"><span class="glyphicon glyphicon-book"></span>数据统计</a>
+                </li>
+                <li>
+                    <a class="curlink" href="/art/index_handler"><span class="glyphicon glyphicon-book"></span>&nbsp;文章</a>
+                </li>
+            </ul>
+        </div>
+        <!--导航-->
+
+    </div>
+</nav>
+<!--导航-->
+{% block content %}{% endblock %}
+<!--底部-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    ©&nbsp;2018&nbsp;1000phone.com&nbsp;xICP备 by zhougy
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--底部-->
+<script src="{% static 'base/js/jquery.min.js' %}"></script>
+<script src="{%  static 'base/js/bootstrap.min.js' %}"></script>
+<script src="{%  static 'base/js/jquery.singlePageNav.min.js' %}"></script>
+<script src="{%  static 'base/js/wow.min.js' %}"></script>
+<script src="{%  static 'lazyload/jquery.lazyload.min.js' %}"></script>
+<script src="//cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+<script>
+    $(function() {
+        new WOW().init();
+    })
+</script>
+<script>
+    $(document).ready(function() {
+        $("img.lazy").lazyload({
+            effect: "fadeIn"
+        });
+        $("#btn-search").click(function(){
+            var key = $("#key").val();
+
+            location.href = "/art/search?key="+key;
+        });
+    });
+</script>
+{% block js %}{% endblock %}
+</body>
+</html>

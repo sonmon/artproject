@@ -1,0 +1,66 @@
+[INFO][2018-04-20 17:43:54,382][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:43:54,413][basehttp.py][log_message][124]> "GET /art/index_handler/ HTTP/1.1" 200 32145
+[INFO][2018-04-20 17:43:54,445][basehttp.py][log_message][124]> "GET /static/base/css/bootstrap-art.css HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,445][basehttp.py][log_message][124]> "GET /static/base/css/bootstrap.min.css HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,446][basehttp.py][log_message][124]> "GET /static/base/css/animate.css HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,448][basehttp.py][log_message][124]> "GET /static/base/js/jquery.min.js HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,459][basehttp.py][log_message][124]> "GET /static/base/js/bootstrap.min.js HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,461][basehttp.py][log_message][124]> "GET /static/base/js/jquery.singlePageNav.min.js HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,466][basehttp.py][log_message][124]> "GET /static/base/js/wow.min.js HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,471][basehttp.py][log_message][124]> "GET /static/lazyload/jquery.lazyload.min.js HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,472][basehttp.py][log_message][124]> "GET /static/base/images/logo.png HTTP/1.1" 304 0
+[INFO][2018-04-20 17:43:54,488][basehttp.py][log_message][124]> "GET /static/base/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[INFO][2018-04-20 17:44:04,277][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:44:04,309][basehttp.py][log_message][124]> "GET /art/index_handler/?t=1 HTTP/1.1" 200 29280
+[INFO][2018-04-20 17:44:06,174][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:44:06,195][basehttp.py][log_message][124]> "GET /art/index_handler/?t=0 HTTP/1.1" 200 32145
+[INFO][2018-04-20 17:44:11,646][basehttp.py][log_message][124]> "GET /art/detail?id=255 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:44:11,669][basehttp.py][log_message][124]> "GET /art/detail/?id=255 HTTP/1.1" 200 5335
+[INFO][2018-04-20 17:44:16,408][basehttp.py][log_message][124]> "GET /art/detail?id=254 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:44:16,431][basehttp.py][log_message][124]> "GET /art/detail/?id=254 HTTP/1.1" 200 5146
+[INFO][2018-04-20 17:44:35,834][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:44:35,867][basehttp.py][log_message][124]> "GET /art/index_handler/?page=2&t=0 HTTP/1.1" 200 32080
+[INFO][2018-04-20 17:44:41,044][basehttp.py][log_message][124]> "GET /art/detail?id=218 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:44:41,067][basehttp.py][log_message][124]> "GET /art/detail/?id=218 HTTP/1.1" 200 5332
+[INFO][2018-04-20 17:44:46,552][basehttp.py][log_message][124]> "GET /art/detail?id=217 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:44:46,584][basehttp.py][log_message][124]> "GET /art/detail/?id=217 HTTP/1.1" 200 5332
+[INFO][2018-04-20 17:45:43,558][basehttp.py][log_message][124]> "GET /art/detail/?id=255 HTTP/1.1" 200 5335
+[INFO][2018-04-20 17:45:56,375][basehttp.py][log_message][124]> "GET /art/detail/?id=254 HTTP/1.1" 200 5146
+[INFO][2018-04-20 17:46:02,055][basehttp.py][log_message][124]> "GET /art/detail?id=253 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:46:02,075][basehttp.py][log_message][124]> "GET /art/detail/?id=253 HTTP/1.1" 200 5600
+[INFO][2018-04-20 17:46:09,735][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:46:09,764][basehttp.py][log_message][124]> "GET /art/index_handler/?t=9 HTTP/1.1" 200 29371
+[INFO][2018-04-20 17:46:14,841][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:46:14,862][basehttp.py][log_message][124]> "GET /art/index_handler/?t=1 HTTP/1.1" 200 29280
+[INFO][2018-04-20 17:46:23,737][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:46:23,758][basehttp.py][log_message][124]> "GET /art/index_handler/?page=1&t=1 HTTP/1.1" 200 29280
+[INFO][2018-04-20 17:46:31,208][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:46:31,233][basehttp.py][log_message][124]> "GET /art/index_handler/?page=1&t=1 HTTP/1.1" 200 29280
+[INFO][2018-04-20 17:46:38,589][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:46:38,608][basehttp.py][log_message][124]> "GET /art/index_handler/?t=0 HTTP/1.1" 200 32145
+[INFO][2018-04-20 17:47:38,805][basehttp.py][log_message][124]> "GET /art/detail?id=237 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:47:38,823][basehttp.py][log_message][124]> "GET /art/detail/?id=237 HTTP/1.1" 200 5292
+[INFO][2018-04-20 17:47:47,328][basehttp.py][log_message][124]> "GET /art/detail?id=236 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:47:47,350][basehttp.py][log_message][124]> "GET /art/detail/?id=236 HTTP/1.1" 200 5182
+[INFO][2018-04-20 17:47:51,024][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:47:51,048][basehttp.py][log_message][124]> "GET /art/index_handler/?page=2&t=0 HTTP/1.1" 200 32080
+[INFO][2018-04-20 17:47:55,745][basehttp.py][log_message][124]> "GET /art/detail?id=226 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:47:55,770][basehttp.py][log_message][124]> "GET /art/detail/?id=226 HTTP/1.1" 200 5209
+[INFO][2018-04-20 17:48:43,119][basehttp.py][log_message][124]> "GET /art/detail/?id=217 HTTP/1.1" 200 5332
+[INFO][2018-04-20 17:48:48,015][basehttp.py][log_message][124]> "GET /art/detail/?id=218 HTTP/1.1" 200 5332
+[INFO][2018-04-20 17:48:51,053][basehttp.py][log_message][124]> "GET /art/detail?id=219 HTTP/1.1" 301 0
+[INFO][2018-04-20 17:48:51,079][basehttp.py][log_message][124]> "GET /art/detail/?id=219 HTTP/1.1" 200 5281
+[INFO][2018-04-20 17:48:57,129][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:48:57,154][basehttp.py][log_message][124]> "GET /art/index_handler/?t=1 HTTP/1.1" 200 29280
+[INFO][2018-04-20 17:48:59,009][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:48:59,039][basehttp.py][log_message][124]> "GET /art/index_handler/?t=2 HTTP/1.1" 200 29353
+[INFO][2018-04-20 17:49:01,095][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:49:01,120][basehttp.py][log_message][124]> "GET /art/index_handler/?t=3 HTTP/1.1" 200 29290
+[INFO][2018-04-20 17:49:02,655][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:49:02,684][basehttp.py][log_message][124]> "GET /art/index_handler/?t=12 HTTP/1.1" 200 29421
+[INFO][2018-04-20 17:49:04,585][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:49:04,607][basehttp.py][log_message][124]> "GET /art/index_handler/?t=10 HTTP/1.1" 200 19172
+[INFO][2018-04-20 17:49:11,865][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:49:11,887][basehttp.py][log_message][124]> "GET /art/index_handler/?t=0 HTTP/1.1" 200 32145
+[INFO][2018-04-20 17:53:43,115][index_handler.py][IndexHandler][31]> IndexHandler request Handler begin
+[INFO][2018-04-20 17:53:43,138][basehttp.py][log_message][124]> "GET /art/index_handler/?t=1 HTTP/1.1" 200 29280

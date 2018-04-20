@@ -1,0 +1,44 @@
+{% extends "statics/base.html" %}
+{% load staticfiles %}
+{% block content %}
+<script src="{% static 'hchart/highcharts.js' %}"></script>
+<script src="{% static 'hchart/modules/exporting.js' %}"></script>
+
+<div id="page-wrapper">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">统计图表</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div id="container"></div>
+                <script>
+	$(function () {
+	    var  val= [{{ data | safe }}]
+    var chart = Highcharts.chart('container', {
+        title: {
+            text: '图表变换'
+        },
+        subtitle: {
+            text: '美文月访问量'
+        },
+        xAxis: {
+            categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+        },
+        series:val
+    });
+});
+</script>
+
+            </div>
+        </div>
+
+
+</div>
+{% endblock %}
+
+
