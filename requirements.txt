@@ -9,7 +9,7 @@ Django==1.11
 django-celery==3.2.2
 django-celery-beat==1.1.1
 django-celery-results==1.0.1
-flower==0.9.2
+flower==1.2.0
 gunicorn==19.7.1
 idna==2.6
 kombu==4.1.0
